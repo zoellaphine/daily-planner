@@ -3,31 +3,33 @@ body {
   font-size: 16px;
 }
 
-textarea {
-  background: transparent;
-  border: none;
-  border-left: 1px solid black;
-  color: #000000;
-  padding: 10px;
-  resize: none;
-}
-
 .description {
   white-space: pre-wrap;
 }
 
-.time-block {
-  border-radius: 15px;
+.display {
+  font-size: 60px;
+  text-align: center;
 }
 
-.row {
-  border-top: 1px solid white;
+.future {
+  background-color: #77dd77;
+  color: white;
 }
 
 .hour {
+  align-items: center;
   background-color: #ffffff;
   border-top: 1px dashed #000000;
   color: #000000;
+  display: flex;
+  justify-content: center;
+}
+
+.lead {
+  font-family: sans-serif;
+  font-size: 30px;
+  text-align: center;
 }
 
 .past {
@@ -40,9 +42,21 @@ textarea {
   color: white;
 }
 
-.future {
-  background-color: #77dd77;
-  color: white;
+textarea {
+  background: transparent;
+  border: none;
+  border-left: 1px solid black;
+  color: #000000;
+  padding: 10px;
+  resize: none;
+}
+
+.time-block {
+  border-radius: 15px;
+}
+
+.row {
+  border-top: 1px solid white;
 }
 
 .saveBtn {
