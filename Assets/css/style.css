@@ -6,10 +6,10 @@ body {
 textarea {
   background: transparent;
   border: none;
-  resize: none;
-  color: #000000;
   border-left: 1px solid black;
+  color: #000000;
   padding: 10px;
+  resize: none;
 }
 
 .description {
@@ -26,8 +26,8 @@ textarea {
 
 .hour {
   background-color: #ffffff;
-  color: #000000;
   border-top: 1px dashed #000000;
+  color: #000000;
 }
 
 .past {
@@ -46,10 +46,10 @@ textarea {
 }
 
 .saveBtn {
+  background-color: #06aed5;
+  border-bottom-right-radius: 15px;
   border-left: 1px solid black;
   border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06aed5;
   color: white;
 }
 
