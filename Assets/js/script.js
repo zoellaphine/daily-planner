@@ -4,6 +4,15 @@
 $(function () {
   let today = new Date();
 
+  // Create array with timeblock divs.
+  let timeBlocks = [];
+  for (let i = 9; i < 13; i++) {
+    timeBlocks.push(document.getElementById('hour-' + i));
+  }
+  for (let j = 1; j < 6; j++) {
+    timeBlocks.push(document.getElementById('hour-' + j));
+  }
+
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -11,14 +20,20 @@ $(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
 
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
   let currentTime = today.getHours();
-  for (let i = 0; i < 9; i++) {
-    
+  // As we iterate through the times 9-17, have l represent which timeblock is
+  // to be adjusted and compare the iteration to the currentTime.
+  let l = 0;
+  console.log(currentTime);
+  for (let k = 9; k < 18; k++) {
+    if (k == currentTime) {
+      timeBlocks[l].classList.add('present');
+    } else if (k < currentTime) {
+      timeBlocks[l].classList.add('past');
+    } else {
+      timeBlocks[l].classList.add('future')
+    }
+    l++;
   }
 
   // TODO: Add code to get any user input that was saved in localStorage and set
